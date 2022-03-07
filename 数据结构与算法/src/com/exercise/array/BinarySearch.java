@@ -14,16 +14,13 @@ package com.exercise.array;
 public class BinarySearch {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 7, 9, 10};
-        Solution01 s = new Solution01();
-        System.out.println(s.search1(nums, 10));//6
-        System.out.println(s.search2(nums, 9));//5
-        System.out.println(s.search2(nums, 10));//-1
+        System.out.println(search1(nums, 10));//6
+        System.out.println(search2(nums, 9));//5
+        System.out.println(search2(nums, 10));//-1
     }
-}
 
-class Solution01 {
     //方法一：左闭右闭，target 是在一个在左闭右闭的区间里，也就是[left, right]
-    public int search1(int[] nums, int target) {
+    public static int search1(int[] nums, int target) {
         // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
         if (target < nums[0] || target > nums[nums.length - 1]) {
             return -1;
@@ -45,7 +42,7 @@ class Solution01 {
 
     //方法二：左闭右开,target 是在一个在左闭右开的区间里，也就是[left, right)，
     //即采用第二种方法查找10是找不到的
-    public int search2(int[] nums, int target) {
+    public static int search2(int[] nums, int target) {
         // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
         if (target < nums[0] || target > nums[nums.length - 1]) {
             return -1;
@@ -65,3 +62,6 @@ class Solution01 {
         return -1;
     }
 }
+
+
+
