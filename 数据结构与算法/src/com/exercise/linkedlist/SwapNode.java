@@ -1,5 +1,9 @@
 package com.exercise.linkedlist;
 
+/**
+ * 两两交换链表节点
+ */
+
 public class SwapNode {
     // 递归版本
     public ListNode swapPairs1(ListNode head) {
@@ -24,7 +28,7 @@ public class SwapNode {
 
         while (prev.next != null && prev.next.next != null) {
             ListNode temp = head.next.next; // 缓存 next
-            prev.next = head.next;          // 将 prev 的 next 改为 head 的 next
+            prev.next= head.next;           // 将 prev 的 next 改为 head 的 next
             head.next.next = head;          // 将 head.next(prev.next) 的next，指向 head
             head.next = temp;               // 将head 的 next 接上缓存的temp
             prev = head;                    // 步进1位

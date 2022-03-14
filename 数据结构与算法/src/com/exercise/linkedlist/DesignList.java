@@ -14,6 +14,7 @@ public class DesignList {
         size = 0;
         head = new ListNode(0);
     }
+
     //获取第index个节点的数值
     public int get(int index) {
         //如果index非法，返回-1
@@ -27,10 +28,12 @@ public class DesignList {
         }
         return currentNode.val;
     }
+
     //在链表最前面插入一个节点
     public void addAtHead(int val) {
         addAtIndex(0, val);
     }
+
     //在链表的最后插入一个节点
     public void addAtTail(int val) {
         addAtIndex(size, val);
