@@ -2,6 +2,7 @@ package com.exercise.linkedlist;
 
 /**
  * 移除链表元素
+ * 删除链表中等于给定值 val 的所有节点。
  */
 
 public class RemoveElement {
