@@ -1,6 +1,7 @@
 package com.exercise.linkedlist;
 
 /**
+ * leetcode.19 删除链表的倒数第N个节点
  * 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
  */
 public class RemoveNthFromEnd {
