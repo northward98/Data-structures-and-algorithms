@@ -9,7 +9,7 @@ package com.exercise.array;
  * 采用双指针法(快慢指针)
  */
 
-public class DeleteElements {
+public class Solution27 {
     public static void main(String[] args) {
         int[] nums = {1, 2, 4, 5, 4, 3, 4};
         System.out.println(del(nums,4));//4
