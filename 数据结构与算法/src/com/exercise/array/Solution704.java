@@ -11,7 +11,7 @@ package com.exercise.array;
  * 当看到题目描述满足如上条件的时候，可以想一想是不是用二分法了。
  */
 
-public class BinarySearch {
+public class Solution704 {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 7, 9, 10};
         System.out.println(search1(nums, 10));//6
