@@ -8,15 +8,7 @@ package com.exercise.array;
  * 双指针法
  */
 
-public class ArraySortedSquare {
-    public static void main(String[] args) {
-        int[] nums = {-4, -2, 0, 3, 10};
-        int[] res = sortedSquare(nums);
-        for (int i = 0; i < res.length; ++i) {
-            System.out.print(res[i] + "\t");
-        }
-    }
-
+public class Solution977 {
     public static int[] sortedSquare(int[] nums) {
         int right = nums.length - 1;
         int left = 0;

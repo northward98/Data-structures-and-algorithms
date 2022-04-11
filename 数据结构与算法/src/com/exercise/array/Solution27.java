@@ -10,15 +10,9 @@ package com.exercise.array;
  */
 
 public class Solution27 {
-    public static void main(String[] args) {
-        int[] nums = {1, 2, 4, 5, 4, 3, 4};
-        System.out.println(del(nums,4));//4
-    }
-
     public static int del(int[] nums, int val) {
-        int fastIndex = 0;
-        int slowIndex;
-        for (slowIndex = 0; fastIndex < nums.length; fastIndex++) {
+        int slowIndex = 0;
+        for (int fastIndex = 0; fastIndex < nums.length; fastIndex++) {
             if (nums[fastIndex] != val) {
                 nums[slowIndex] = nums[fastIndex];
                 slowIndex++;

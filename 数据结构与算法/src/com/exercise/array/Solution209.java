@@ -9,21 +9,19 @@ package com.exercise.array;
  * 滑动窗口法
  */
 
-public class MinSubArrayLen {
-    public static void main(String[] args) {
-        int[] nums = {2, 3, 1, 2, 4, 3};
-        System.out.println(minSubArrayLen(nums, 7));
-    }
-
-    public static int minSubArrayLen(int[] nums, int s) {
+public class Solution209 {
+    public static int minSubArrayLen(int target, int[] nums) {
         int left = 0;
         int sum = 0;
         int result = Integer.MAX_VALUE;
+        int subLength = 0;
         for (int right = 0; right < nums.length; right++) {
             sum += nums[right];
-            while (sum >= s) {
-                result = Math.min(result, right - left + 1);
-                sum -= nums[left++];//不断变更子序列的起始位置
+            while (sum >= target) {
+                subLength = (right - left + 1); // 取子序列的长度
+                result = result < subLength ? result : subLength;
+                sum -= nums[left];//不断变更子序列的起始位置
+                left++;
             }
         }
         return result == Integer.MAX_VALUE ? 0 : result;
