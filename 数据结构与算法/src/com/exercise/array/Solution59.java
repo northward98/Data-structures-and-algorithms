@@ -6,21 +6,10 @@ package com.exercise.array;
  * 且元素按顺时针顺序螺旋排列的正方形矩阵。
  */
 
-public class SpiralMatrix {
-    public static void main(String[] args) {
-        int[][] result = generateMatrix(3);
-        for (int i = 0; i < result.length; i++) {
-            for (int j = 0; j < result[i].length; j++) {
-                System.out.print(result[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-    }
-
+public class Solution59 {
     public static int[][] generateMatrix(int n) {
         int[][] res = new int[n][n];
-        //循环此时
+        //循环次数
         int loop = n / 2;
         //定义起始位置
         int startX = 0;
