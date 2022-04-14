@@ -7,11 +7,13 @@ package com.exercise.linkedlist;
  * 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
  */
 
-public class SwapNode {
+public class Solution24 {
     // 递归版本
     public ListNode swapPairs1(ListNode head) {
-        // base case 退出提交
-        if(head == null || head.next == null) return head;
+
+        if(head == null || head.next == null){
+            return head;
+        }
         // 获取当前节点的下一个节点
         ListNode next = head.next;
         // 进行递归
