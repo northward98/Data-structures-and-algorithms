@@ -10,7 +10,7 @@ package com.exercise.linkedlist;
  *
  * 不允许修改 链表。
  */
-public class CircleList {
+public class Solution142 {
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;

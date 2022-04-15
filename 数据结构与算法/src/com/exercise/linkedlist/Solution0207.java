@@ -7,7 +7,7 @@ package com.exercise.linkedlist;
  * 找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null
  */
 
-public class GetIntersectionNode {
+public class Solution0207 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode curA = headA;
         ListNode curB = headB;
