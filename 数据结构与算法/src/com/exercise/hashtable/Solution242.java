@@ -9,7 +9,7 @@ package com.exercise.hashtable;
  * 说明: 你可以假设字符串只包含小写字母。
  */
 
-public class IsAnagram {
+public class Solution242 {
     public boolean isAnagram(String s, String t) {
         int[] record = new int[26];
         char[] chars = s.toCharArray();
