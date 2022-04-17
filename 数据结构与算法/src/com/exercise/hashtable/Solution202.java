@@ -14,7 +14,7 @@ import java.util.Set;
  *
  * 如果 n 是快乐数就返回 True ；不是，则返回 False 。
  */
-public class IsHappy {
+public class Solution202 {
     public boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
         while (n != 1 && !set.contains(n)){

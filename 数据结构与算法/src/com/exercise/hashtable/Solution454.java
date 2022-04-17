@@ -12,7 +12,7 @@ import java.util.Map;
  * 所有整数的范围在 -2^28 到 2^28 - 1 之间，最终结果不会超过 2^31 - 1 。
  */
 
-public class FourSumCount {
+public class Solution454 {
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
         Map<Integer, Integer> map = new HashMap<>();
         int temp = 0;

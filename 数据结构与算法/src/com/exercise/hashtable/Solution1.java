@@ -10,7 +10,7 @@ import java.util.HashMap;
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
  */
 
-public class TwoSum {
+public class Solution1 {
     public int[] twoSum(int[] nums, int target) {
         int[] res = new int[2];
         if (nums == null || nums.length == 0) {
