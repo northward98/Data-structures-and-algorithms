@@ -20,7 +20,7 @@ import java.util.List;
  *
  */
 
-public class FourSum {
+public class Solution18 {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);

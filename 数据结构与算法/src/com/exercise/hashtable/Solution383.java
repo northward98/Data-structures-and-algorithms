@@ -16,25 +16,28 @@ package com.exercise.hashtable;
  * canConstruct("aa", "aab") -> true
  */
 
-public class CanConstruct {
+public class Solution383 {
     public boolean canConstruct(String ransomNote, String magazine) {
         //记录杂志字符串中字符的出现次数
-        int[] res = new int[26];
-        int temp = 0;
-        for (int i = 0; i < magazine.length(); i++) {
-            temp = magazine.charAt(i) - 'a';
-            res[temp]++;
+        int[] arr = new int[26];
+
+        char[] m = magazine.toCharArray();
+        for(int i = 0;i < m.length;i++){
+            arr[m[i] - 'a'] += 1;
         }
 
-        //遍历ransomNote
-        for (int i = 0; i < ransomNote.length(); i++) {
-            temp = ransomNote.charAt(i) - 'a';
-            if (res[temp] > 0) {
-                res[temp]--;
-            } else {
+        char[] r = ransomNote.toCharArray();
+        for(int i = 0;i < r.length;i++){
+            arr[r[i] - 'a'] -= 1;
+
+        }
+
+        for(int i = 0;i < arr.length;i++){
+            if(arr[i] < 0){
                 return false;
             }
         }
+
         return true;
     }
 }

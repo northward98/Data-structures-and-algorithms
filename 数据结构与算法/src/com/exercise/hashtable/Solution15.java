@@ -16,7 +16,7 @@ import java.util.List;
  * 满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]
  */
 
-public class ThreeSum {
+public class Solution15 {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
