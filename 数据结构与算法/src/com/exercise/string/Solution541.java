@@ -11,8 +11,8 @@ package com.exercise.string;
  * 输入: s = "abcdefg", k = 2
  * 输出: "bacdfeg"
  */
-public class ReverseStringTwo {
-    public String reverseStr(String s, int k) {
+public class Solution541 {
+    public String reverseStr1(String s, int k) {
         char[] c = s.toCharArray();
         for (int i = 0; i < c.length; i += 2 * k) {
             //如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样。
@@ -32,5 +32,23 @@ public class ReverseStringTwo {
             c[start] = c[end];
             c[end] = temp;
         }
+    }
+
+    public String reverseStr2(String s, int k) {
+        char[] ch = s.toCharArray();
+        for(int i = 0; i < ch.length; i += 2 * k){
+            int start = i;
+            //这里是判断尾数够不够k个来取决end指针的位置
+            int end = (ch.length - 1) < (start + k - 1) ?ch.length - 1:start + k - 1;
+            //用异或运算反转
+            while(start < end){
+                ch[start] ^= ch[end];
+                ch[end] ^= ch[start];
+                ch[start] ^= ch[end];
+                start++;
+                end--;
+            }
+        }
+        return new String(ch);
     }
 }
