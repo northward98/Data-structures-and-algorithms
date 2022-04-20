@@ -9,12 +9,11 @@ package com.exercise.string;
  * 该函数将返回左旋转两位得到的结果"cdefgab"。
  */
 
-public class ReverseLeftWords {
+public class Solution058II {
     public String reverseLeftWords(String s, int n) {
-        int len = s.length();
         StringBuilder sb = new StringBuilder(s);
         reverseString(sb, 0, n - 1);
-        reverseString(sb, n, len - 1);
+        reverseString(sb, n, s.length() - 1);
         return sb.reverse().toString();
     }
 
