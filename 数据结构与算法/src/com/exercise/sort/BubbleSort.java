@@ -1,5 +1,8 @@
 package com.exercise.sort;
 
+/**
+ * 冒泡排序
+ */
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {1, 5, 6, 3,  7, 4};
