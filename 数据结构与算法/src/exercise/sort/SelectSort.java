@@ -5,6 +5,9 @@ package exercise.sort;
  */
 
 public class SelectSort {
+    public static void main(String[] args) {
+
+    }
 
     public static void selectSort(int[] a, int n) {
         int i;        // 有序区的末尾位置
@@ -29,5 +32,4 @@ public class SelectSort {
             }
         }
     }
-
 }
