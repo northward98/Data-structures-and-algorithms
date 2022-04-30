@@ -6,29 +6,34 @@ package exercise.sort;
 
 public class SelectSort {
     public static void main(String[] args) {
+        int[] arr = {2, 5, 4, 1, 3, 6};
+        System.out.println("排序前");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
 
+        System.out.println();
+
+        selectSort(arr);
+        System.out.println("排序后");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
     }
 
-    public static void selectSort(int[] a, int n) {
-        int i;        // 有序区的末尾位置
-        int j;        // 无序区的起始位置
-        int min;    // 无序区中最小元素位置
-
-        for(i=0; i<n; i++) {
-            min=i;
-
-            // 找出"a[i+1] ... a[n]"之间的最小元素，并赋值给min。
-            for(j=i+1; j<n; j++) {
-                if(a[j] < a[min])
-                    min=j;
+    public static void selectSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int minIndex = i; //最小元素索引，初始化为 i
+            //从 i+1 处开始遍历
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex])//有比最小元素索引处更小的元素，更新索引
+                    minIndex = j;
             }
 
-            // 若min!=i，则交换 a[i] 和 a[min]。
-            // 交换之后，保证了a[0] ... a[i] 之间的元素是有序的。
-            if(min != i) {
-                int tmp = a[i];
-                a[i] = a[min];
-                a[min] = tmp;
+            if (minIndex != i) {//若 minIndex 不等于 i，交换元素，是有序区间的元素有序
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
             }
         }
     }
