@@ -21,6 +21,9 @@ public class Solution704 {
 
     //方法一：左闭右闭，target 是在一个在左闭右闭的区间里，也就是[left, right]
     public static int search1(int[] nums, int target) {
+        if(nums.length == 0){
+            return -1;
+        }
         // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
         if (target < nums[0] || target > nums[nums.length - 1]) {
             return -1;

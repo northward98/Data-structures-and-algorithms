@@ -7,6 +7,7 @@ import java.util.Queue;
 
 /**
  * leetcode.107 二叉树的层序遍历 II
+ *  自底向上的层序遍历
  */
 public class Solution107 {
     public List<List<Integer>> levelOrder(TreeNode root) {
