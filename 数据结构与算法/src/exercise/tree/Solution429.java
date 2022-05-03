@@ -21,11 +21,11 @@ public class Solution429 {
             List<Integer> levelList = new ArrayList<>();
 
             for (int i = 0; i < levelSize; i++) {
-                Node poll = queue.poll();
+                Node temp = queue.poll();
 
-                levelList.add(poll.val);
+                levelList.add(temp.val);
 
-                List<Node> children = poll.children;
+                List<Node> children = temp.children;
                 if (children == null || children.size() == 0) {
                     continue;
                 }
