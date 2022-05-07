@@ -11,6 +11,7 @@ public class Solution106 {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         return build(inorder, 0, inorder.length, postorder, 0, postorder.length);
     }
+
     public TreeNode build(int[] inorder, int inLeft, int inRight,
                                int[] postorder, int postLeft, int postRight) {
         // 没有元素了

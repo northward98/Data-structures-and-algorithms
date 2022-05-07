@@ -20,22 +20,22 @@ public class Solution105 {
         }
 
         // val 为前序遍历第一个的值，也即是根节点的值
-        // idx 为根据根节点的值来找中序遍历的下标
-        int idx = inLeft;
-        int val = preorder[preLeft];
-        TreeNode root = new TreeNode(val);
+        // index 为根据根节点的值来找中序遍历的下标
+        int index = 0;
+        int rootVal = preorder[preLeft];
+        TreeNode root = new TreeNode(rootVal);
         for (int i = inLeft; i <= inRight; i++) {
-            if (inorder[i] == val) {
-                idx = i;
+            if (inorder[i] == rootVal) {
+                index = i;
                 break;
             }
         }
 
-        // 根据 idx 来递归找左右子树
-        root.left = build(preorder, preLeft + 1, preLeft + (idx - inLeft),
-                inorder, inLeft, idx - 1);
-        root.right = build(preorder, preLeft + (idx - inLeft) + 1, preRight,
-                inorder, idx + 1, inRight);
+        // 根据 index 来递归找左右子树
+        root.left = build(preorder, preLeft + 1, preLeft + (index - inLeft),
+                inorder, inLeft, index - 1);
+        root.right = build(preorder, preLeft + (index - inLeft) + 1, preRight,
+                inorder, index + 1, inRight);
         return root;
     }
 }
